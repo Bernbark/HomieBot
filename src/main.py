@@ -81,7 +81,7 @@ bot.colors = {
 }
 bot.color_list = [c for c in bot.colors.values()]
 
-cluster = MongoClient(secret_file)
+cluster = MongoClient(bot.connection_url)
 
 db = cluster["HomieBot"]
 items = db["items"]
